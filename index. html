@@ -5,7 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>SB TOPUP 2</title>
-<style>
+css<style><style>
+  .services {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px 20px;
+  }
+
+  .services > h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover,
+  .package-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .services h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #22c55e;
+    margin: 10px auto 0;
+    border-radius: 10px;
+  }
+</style>
   #ai {
     margin-top: 20px;
   }
