@@ -317,9 +317,10 @@ function askAI() {
 <h2>🔥 Free Fire Top Up</h2>
 <a href="#" class="button">ORDER NOW</a>
 <div class="card">
+  <div class="package-card">
   <h3>💎 100 Diamonds</h3>
-  <p>Price: ৳80</p>
-  <a href="#" class="button">ORDER NOW</a>
+  <div class="package-price">৳80</div>
+  <a href="#order" class="order-btn">ORDER NOW</a>
 </div>
 
 <div class="card">
