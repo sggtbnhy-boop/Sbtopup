@@ -62,8 +62,37 @@
       onclick="askAI()"
       class="button"
       style="border:0;cursor:pointer;"
-    >
-      🤖 Ask AI
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">
+
+  <button
+    onclick="quickQuestion('Top Up কীভাবে করব?')"
+    class="button"
+    style="margin-top:0;border:0;cursor:pointer;"
+  >
+    💎 Top Up
+  </button>
+
+  <button
+    onclick="quickQuestion('কী কী payment method আছে?')"
+    class="button"
+    style="margin-top:0;border:0;cursor:pointer;"
+  >
+    💳 Payment
+  </button>
+
+  <button
+    onclick="quickQuestion('Order কীভাবে করব?')"
+    class="button"
+    style="margin-top:0;border:0;cursor:pointer;"
+  >
+    🛒 Order
+  </button>
+
+</div>
+      🤖 Ask AI function quickQuestion(question) {
+  document.getElementById("aiQuestion").value = question;
+  askAI();
+}
     </button>
   </div>
 </section>
