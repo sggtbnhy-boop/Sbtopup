@@ -323,22 +323,22 @@ function askAI() {
   <a href="#order" class="order-btn">ORDER NOW</a>
 </div>
 
-<div class="card">
+<div class="package-card">
   <h3>💎 310 Diamonds</h3>
-  <p>Price: ৳220</p>
-  <a href="#" class="button">ORDER NOW</a>
+  <div class="package-price">৳220</div>
+  <a href="#order" class="order-btn">ORDER NOW</a>
 </div>
 
-<div class="card">
+<div class="package-card">
   <h3>💎 520 Diamonds</h3>
-  <p>Price: ৳350</p>
-  <a href="#" class="button">ORDER NOW</a>
+  <div class="package-price">৳350</div>
+  <a href="#order" class="order-btn">ORDER NOW</a>
 </div>
 
-<div class="card">
+<div class="package-card">
   <h3>💎 1060 Diamonds</h3>
-  <p>Price: ৳700</p>
-  <a href="#" class="button">ORDER NOW</a>
+  <div class="package-price">৳700</div>
+  <a href="#order" class="order-btn">ORDER NOW</a>
 </div>
     <div class="card">
       <h3>💎 Game Top Up</h3>
