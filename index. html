@@ -666,38 +666,51 @@ function askAI() {
   </div>
 
 </section>
-JavaScript <script>
-  document.getElementById("orderForm").addEventListener("submit", function(event) {
+<script>
+const SUPABASE_URL = "https://khspwaoavafwoqvtyaux.supabase.co";
+const SUPABASE_KEY = "sb_publishable_hq89AceCCRyKo2Y6NkpqMA_3JGo29Tp";
 
-    event.preventDefault();
+document.getElementById("orderForm").addEventListener("submit", async function(event) {
+  event.preventDefault();
 
-    const uid = document.getElementById("playerUID").value;
-    const name = document.getElementById("customerName").value;
-    const mobile = document.getElementById("mobileNumber").value;
-    const packageName = document.getElementById("package").value;
-    const payment = document.getElementById("paymentMethod").value;
-    const transactionID = document.getElementById("transactionID").value;
+  const orderMessage = document.getElementById("orderMessage");
 
-    const orderMessage = document.getElementById("orderMessage");
+  const order = {
+    player_uid: document.getElementById("playerUID").value.trim(),
+    customer_name: document.getElementById("customerName").value.trim(),
+    mobile_number: document.getElementById("mobileNumber").value.trim(),
+    package_name: document.getElementById("package").value,
+    payment_method: document.getElementById("paymentMethod").value,
+    transaction_id: document.getElementById("transactionID").value.trim()
+  };
 
-    orderMessage.innerText =
-      "✅ Order submitted successfully!\n" +
-      "Player UID: " + uid + "\n" +
-      "Package: " + packageName + "\n" +
-      "Payment: " + payment + "\n" +
-      "Transaction ID: " + transactionID;
+  orderMessage.innerText = "⏳ Order পাঠানো হচ্ছে...";
 
-    console.log({
-      uid: uid,
-      name: name,
-      mobile: mobile,
-      package: packageName,
-      payment: payment,
-      transactionID: transactionID
-    });
+  try {
+    const response = await fetch(
+      SUPABASE_URL + "/rest/v1/orders",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "apikey": SUPABASE_KEY,
+          "Authorization": "Bearer " + SUPABASE_KEY,
+          "Prefer": "return=minimal"
+        },
+        body: JSON.stringify(order)
+      }
+    );
 
+    if (!response.ok) {
+      throw new Error(await response.text());
+    }
+
+    orderMessage.innerText = "✅ Order সফলভাবে জমা হয়েছে!";
     document.getElementById("orderForm").reset();
 
-  });
-</script></body>
-</html>
+  } catch (error) {
+    console.error(error);
+    orderMessage.innerText = "❌ Order জমা হয়নি। আবার চেষ্টা করুন।";
+  }
+});
+</script>
