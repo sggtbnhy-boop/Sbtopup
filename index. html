@@ -1,1 +1,783 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>SB TOPUP 2</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background: #020617;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #334155;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: #22c55e;
+    }
+
+    header {
+      background: linear-gradient(135deg, #14532d, #0f172a);
+      text-align: center;
+      padding: 35px 15px;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #cbd5e1;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 55px 20px;
+      background:
+        radial-gradient(circle at top, rgba(34,197,94,.25), transparent 40%),
+        #0f172a;
+    }
+
+    .hero h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 30px;
+      background: #22c55e;
+      color: white;
+      text-decoration: none;
+      border: 0;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      opacity: .85;
+    }
+
+    .services {
+      padding: 25px 15px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .services > h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 15px;
+      padding: 22px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .package-card {
+      background: linear-gradient(145deg, #1e293b, #172033);
+      border: 1px solid #475569;
+      border-radius: 18px;
+      padding: 20px;
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    .package-card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .package-price {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #22c55e;
+    }
+
+    .order-btn {
+      display: inline-block;
+      padding: 11px 22px;
+      background: #22c55e;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    form {
+      text-align: left;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 14px;
+      margin: 8px 0 14px;
+      border-radius: 10px;
+      border: 1px solid #475569;
+      background: #0f172a;
+      color: white;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #22c55e;
+      box-shadow: 0 0 0 2px rgba(34,197,94,.15);
+    }
+
+    form .button {
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    #orderMessage {
+      margin-top: 15px;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding: 25px 15px;
+      text-align: center;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    .ai-box {
+      background: #111827;
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+      }
+
+      .hero h2 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo">
+      🔥 SB TOPUP 2
+    </div>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#services">Top Up</a>
+      <a href="#payment">Payment</a>
+      <a href="#order">Order</a>
+      <a href="#ai">🤖 AI</a>
+    </div>
+
+  </nav>
+
+
+  <!-- HEADER -->
+  <header>
+
+    <h1>🔥 SB TOPUP 2</h1>
+
+    <p>Fast • Easy • Trusted</p>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <h2>Welcome to SB TOPUP 2</h2>
+
+    <p>
+      আপনার পছন্দের গেমের Top Up
+      সহজেই করুন।
+      দ্রুত সার্ভিস এবং সহজ অর্ডার সিস্টেম।
+    </p>
+
+    <a href="#services" class="button">
+      TOP UP NOW
+    </a>
+
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+
+    <h2>🎮 Our Services</h2>
+
+    <div class="card">
+
+      <h3>🔥 Free Fire Top Up</h3>
+
+      <p>
+        আপনার Free Fire account-এর জন্য
+        Diamond Top Up করুন।
+      </p>
+
+    </div>
+
+
+    <!-- 100 DIAMONDS -->
+    <div class="package-card">
+
+      <h3>💎 100 Diamonds</h3>
+
+      <div class="package-price">
+        ৳80
+      </div>
+
+      <a href="#order" class="order-btn">
+        ORDER NOW
+      </a>
+
+    </div>
+
+
+    <!-- 310 DIAMONDS -->
+    <div class="package-card">
+
+      <h3>💎 310 Diamonds</h3>
+
+      <div class="package-price">
+        ৳220
+      </div>
+
+      <a href="#order" class="order-btn">
+        ORDER NOW
+      </a>
+
+    </div>
+
+
+    <!-- 520 DIAMONDS -->
+    <div class="package-card">
+
+      <h3>💎 520 Diamonds</h3>
+
+      <div class="package-price">
+        ৳350
+      </div>
+
+      <a href="#order" class="order-btn">
+        ORDER NOW
+      </a>
+
+    </div>
+
+
+    <!-- 1060 DIAMONDS -->
+    <div class="package-card">
+
+      <h3>💎 1060 Diamonds</h3>
+
+      <div class="package-price">
+        ৳700
+      </div>
+
+      <a href="#order" class="order-btn">
+        ORDER NOW
+      </a>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>💎 Game Top Up</h3>
+
+      <p>
+        দ্রুত ও সহজে Game Top Up করুন।
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>⚡ Fast Service</h3>
+
+      <p>
+        সহজ এবং দ্রুত অর্ডার করার সুবিধা।
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>🛒 Easy Order</h3>
+
+      <p>
+        কয়েকটি ধাপেই আপনার অর্ডার সম্পন্ন করুন।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- PAYMENT -->
+  <section class="services" id="payment">
+
+    <h2>💳 Payment Methods</h2>
+
+    <div class="card">
+
+      <h3>📱 bKash</h3>
+
+      <p>
+        Payment করার আগে সঠিক নম্বর ও তথ্য যাচাই করুন।
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>📱 Nagad</h3>
+
+      <p>
+        Payment করার আগে সঠিক নম্বর ও তথ্য যাচাই করুন।
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>🚀 Rocket</h3>
+
+      <p>
+        Payment করার আগে সঠিক নম্বর ও তথ্য যাচাই করুন।
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <p>
+        ⚠️ Payment করার আগে আপনার Order
+        ভালোভাবে যাচাই করুন।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ORDER FORM -->
+  <section class="services" id="order">
+
+    <h2>🛒 Place Your Order</h2>
+
+    <div class="card">
+
+      <form id="orderForm">
+
+        <input
+          type="text"
+          id="playerUID"
+          placeholder="🎮 Player UID"
+          required
+        >
+
+        <input
+          type="text"
+          id="customerName"
+          placeholder="👤 আপনার নাম"
+          required
+        >
+
+        <input
+          type="tel"
+          id="mobileNumber"
+          placeholder="📱 Mobile Number"
+          required
+        >
+
+        <select id="package" required>
+
+          <option value="">
+            💎 Package নির্বাচন করুন
+          </option>
+
+          <option value="100 Diamonds - ৳80">
+            100 Diamonds - ৳80
+          </option>
+
+          <option value="310 Diamonds - ৳220">
+            310 Diamonds - ৳220
+          </option>
+
+          <option value="520 Diamonds - ৳350">
+            520 Diamonds - ৳350
+          </option>
+
+          <option value="1060 Diamonds - ৳700">
+            1060 Diamonds - ৳700
+          </option>
+
+        </select>
+
+
+        <select id="paymentMethod" required>
+
+          <option value="">
+            💳 Payment Method
+          </option>
+
+          <option value="bKash">
+            bKash
+          </option>
+
+          <option value="Nagad">
+            Nagad
+          </option>
+
+          <option value="Rocket">
+            Rocket
+          </option>
+
+        </select>
+
+
+        <input
+          type="text"
+          id="transactionID"
+          placeholder="🧾 Transaction ID"
+          required
+        >
+
+
+        <button
+          type="submit"
+          class="button"
+        >
+          ✅ SUBMIT ORDER
+        </button>
+
+      </form>
+
+
+      <p id="orderMessage"></p>
+
+    </div>
+
+  </section>
+
+
+  <!-- AI ASSISTANT -->
+  <section class="services" id="ai">
+
+    <h2>🤖 SB AI Assistant</h2>
+
+    <div class="card ai-box">
+
+      <p id="aiReply">
+        আসসালামু আলাইকুম! 👋
+        আমি SB TOPUP AI Assistant!
+        কী জানতে চান?
+      </p>
+
+      <input
+        type="text"
+        id="aiQuestion"
+        placeholder="আপনার প্রশ্ন লিখুন..."
+      >
+
+      <button
+        type="button"
+        class="button"
+        onclick="askAI()"
+      >
+        🤖 Ask AI
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      <strong>🔥 SB TOPUP 2</strong>
+    </p>
+
+    <p>
+      Fast • Easy • Trusted
+    </p>
+
+    <p>
+      © 2026 SB TOPUP 2 — All Rights Reserved
+    </p>
+
+  </footer>
+
+
+  <!-- SUPABASE ORDER SCRIPT -->
+  <script>
+
+    const SUPABASE_URL =
+      "https://khspwaoavafwoqvtyaux.supabase.co";
+
+    /*
+      এখানে আপনার আগের Supabase Publishable Key বসান।
+      আপনার আসল key কাউকে চ্যাটে পাঠাবেন না।
+    */
+    const SUPABASE_KEY =
+      "sb_publishable_hq89AceCCRyKo2Y6NkpqMA_3JGo29Tp";
+
+
+    const orderForm =
+      document.getElementById("orderForm");
+
+    const orderMessage =
+      document.getElementById("orderMessage");
+
+
+    orderForm.addEventListener("submit", async function(event) {
+
+      event.preventDefault();
+
+
+      const playerUID =
+        document.getElementById("playerUID").value.trim();
+
+      const customerName =
+        document.getElementById("customerName").value.trim();
+
+      const mobileNumber =
+        document.getElementById("mobileNumber").value.trim();
+
+      const packageName =
+        document.getElementById("package").value;
+
+      const paymentMethod =
+        document.getElementById("paymentMethod").value;
+
+      const transactionID =
+        document.getElementById("transactionID").value.trim();
+
+
+      if (
+        !playerUID ||
+        !customerName ||
+        !mobileNumber ||
+        !packageName ||
+        !paymentMethod ||
+        !transactionID
+      ) {
+
+        orderMessage.innerText =
+          "⚠️ সব তথ্য পূরণ করুন।";
+
+        return;
+      }
+
+
+      orderMessage.innerText =
+        "⏳ Order পাঠানো হচ্ছে...";
+
+
+      const order = {
+
+        player_uid: playerUID,
+
+        customer_name: customerName,
+
+        mobile_number: mobileNumber,
+
+        package_name: packageName,
+
+        payment_method: paymentMethod,
+
+        transaction_id: transactionID
+
+      };
+
+
+      try {
+
+        const response = await fetch(
+
+          SUPABASE_URL + "/rest/v1/orders",
+
+          {
+
+            method: "POST",
+
+            headers: {
+
+              "Content-Type":
+                "application/json",
+
+              "apikey":
+                SUPABASE_KEY,
+
+              "Authorization":
+                "Bearer " + SUPABASE_KEY,
+
+              "Prefer":
+                "return=minimal"
+
+            },
+
+            body:
+              JSON.stringify(order)
+
+          }
+
+        );
+
+
+        if (!response.ok) {
+
+          const errorText =
+            await response.text();
+
+          throw new Error(errorText);
+
+        }
+
+
+        orderMessage.innerText =
+          "✅ Order সফলভাবে পাঠানো হয়েছে!";
+
+
+        orderForm.reset();
+
+
+      } catch (error) {
+
+        console.error(error);
+
+        orderMessage.innerText =
+          "❌ Order পাঠানো যায়নি। আবার চেষ্টা করুন।";
+
+      }
+
+    });
+
+
+    /* AI ASSISTANT */
+
+    function askAI() {
+
+      const question =
+        document.getElementById("aiQuestion")
+        .value
+        .trim();
+
+      const reply =
+        document.getElementById("aiReply");
+
+
+      if (!question) {
+
+        reply.innerText =
+          "⚠️ আগে আপনার প্রশ্ন লিখুন।";
+
+        return;
+
+      }
+
+
+      reply.innerText =
+        "🤖 SB AI: আপনার প্রশ্নটি পেয়েছি — \"" +
+        question +
+        "\"\n\n" +
+        "বর্তমানে AI API সংযোগ করা হয়নি। " +
+        "পরবর্তী ধাপে আসল AI API সংযোগ করা যাবে।";
+
+    }
+
+  </script>
+
+</body>
+</html>
