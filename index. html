@@ -5,9 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>SB TOPUP 2</title>
+<style>
+  #ai {
+    margin-top: 20px;
+  }
 
+  #ai .card {
+    background: linear-gradient(145deg, #1e293b, #111827);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  }
+
+  #aiReply {
+    background: #020617;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 70px;
+    white-space: pre-line;
+    text-align: left;
+    color: #e2e8f0;
+  }
+
+  #aiQuestion {
+    outline: none;
+    color: #111827;
+  }
+
+  #aiQuestion:focus {
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.4);
+  }
+</style>
   <style>
-    * {
+    css
       margin: 0;
       padding: 0;
       box-sizing: border-box;
