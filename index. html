@@ -123,6 +123,39 @@
 
     form.reset();
   });
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const inputs = form.querySelectorAll("input");
+    const selects = form.querySelectorAll("select");
+
+    const uid = inputs[0].value;
+    const name = inputs[1].value;
+    const mobile = inputs[2].value;
+    const packageName = selects[0].value;
+    const payment = selects[1].value;
+
+    const myWhatsAppNumber = "8801856927219
+;
+
+    const message =
+      "🔥 SB TOPUP 2 ORDER%0A%0A" +
+      "👤 Name: " + name + "%0A" +
+      "🎮 Player UID: " + uid + "%0A" +
+      "📱 Mobile: " + mobile + "%0A" +
+      "💎 Package: " + packageName + "%0A" +
+      "💳 Payment: " + payment;
+
+    const whatsappURL =
+      "https://wa.me/" + myWhatsAppNumber + "?text=" + message;
+
+    window.open(whatsappURL, "_blank");
+
+    form.reset();
+  });
 </script>
 <body>
 
