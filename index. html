@@ -99,7 +99,31 @@
     }
   </style>
 </head>
+<script>
+  const form = document.querySelector("form");
 
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const uid = form.querySelectorAll("input")[0].value;
+    const name = form.querySelectorAll("input")[1].value;
+    const mobile = form.querySelectorAll("input")[2].value;
+    const packageName = form.querySelectorAll("select")[0].value;
+    const payment = form.querySelectorAll("select")[1].value;
+
+    alert(
+      "✅ Order Received!\n\n" +
+      "Player UID: " + uid + "\n" +
+      "Name: " + name + "\n" +
+      "Mobile: " + mobile + "\n" +
+      "Package: " + packageName + "\n" +
+      "Payment: " + payment + "\n\n" +
+      "ধন্যবাদ SB TOPUP 2 ব্যবহার করার জন্য।"
+    );
+
+    form.reset();
+  });
+</script>
 <body>
 
   <header>
