@@ -168,6 +168,68 @@
   <footer>
     © 2026 SB TOPUP 2
   </footer>
+<section class="services" id="order">
 
+  <h2>🛒 Place Your Order</h2>
+
+  <div class="card">
+
+    <form>
+
+      <input
+        type="text"
+        placeholder="Player UID"
+        required
+        style="width:100%;padding:14px;margin:8px 0;border-radius:8px;border:0;"
+      >
+
+      <input
+        type="text"
+        placeholder="আপনার নাম"
+        required
+        style="width:100%;padding:14px;margin:8px 0;border-radius:8px;border:0;"
+      >
+
+      <input
+        type="tel"
+        placeholder="Mobile Number"
+        required
+        style="width:100%;padding:14px;margin:8px 0;border-radius:8px;border:0;"
+      >
+
+      <select
+        required
+        style="width:100%;padding:14px;margin:8px 0;border-radius:8px;border:0;"
+      >
+        <option value="">Package নির্বাচন করুন</option>
+        <option>100 Diamonds - ৳80</option>
+        <option>310 Diamonds - ৳220</option>
+        <option>520 Diamonds - ৳350</option>
+        <option>1060 Diamonds - ৳700</option>
+      </select>
+
+      <select
+        required
+        style="width:100%;padding:14px;margin:8px 0;border-radius:8px;border:0;"
+      >
+        <option value="">Payment Method</option>
+        <option>bKash</option>
+        <option>Nagad</option>
+        <option>Rocket</option>
+      </select>
+
+      <button
+        type="submit"
+        class="button"
+        style="border:0;cursor:pointer;"
+      >
+        CONFIRM ORDER
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
 </body>
 </html>
