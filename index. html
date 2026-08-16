@@ -3,16 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>SB TOPUP 2</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      padding: 25px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 15px;
+      color: #e0e7ff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 30px;
+      background: #22c55e;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .services {
+      padding: 20px;
+    }
+
+    .services h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 15px;
+      padding: 22px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding: 20px;
+      text-align: center;
+      background: #020617;
+      color: #94a3b8;
+    }
+  </style>
 </head>
 
 <body>
 
-  <h1>🔥 SB TOPUP 2</h1>
+  <header>
+    <h1>🔥 SB TOPUP 2</h1>
+    <p>Fast • Easy • Trusted</p>
+  </header>
 
-  <p>Welcome to SB TOPUP 2</p>
+  <section class="hero">
+    <h2>Welcome to SB TOPUP 2</h2>
 
-  <p>Fast • Easy • Trusted</p>
+    <p>
+      আপনার পছন্দের গেমের Top Up
+      সহজেই করুন।
+    </p>
+
+    <a href="#services" class="button">
+      TOP UP NOW
+    </a>
+  </section>
+
+  <section class="services" id="services">
+
+    <h2>🎮 Our Services</h2>
+
+    <div class="card">
+      <h3>💎 Game Top Up</h3>
+      <p>দ্রুত ও সহজে Game Top Up করুন।</p>
+    </div>
+
+    <div class="card">
+      <h3>⚡ Fast Service</h3>
+      <p>সহজ এবং দ্রুত অর্ডার করার সুবিধা।</p>
+    </div>
+
+    <div class="card">
+      <h3>🛒 Easy Order</h3>
+      <p>কয়েকটি ধাপেই আপনার অর্ডার সম্পন্ন করুন।</p>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 SB TOPUP 2
+  </footer>
 
 </body>
 </html>
