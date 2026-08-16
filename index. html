@@ -5,7 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>SB TOPUP 2</title>
-css<style><style>
+css<style>css<style><style>
+  footer {
+    margin-top: 40px;
+    padding: 30px 20px;
+    background: #020617;
+    border-top: 1px solid #334155;
+    text-align: center;
+  }
+
+  footer p {
+    margin: 6px 0;
+  }
+
+  .footer-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .footer-copy {
+    color: #94a3b8;
+    font-size: 13px;
+  }
+</style>
   .services {
     max-width: 900px;
     margin: auto;
@@ -495,8 +518,13 @@ function askAI() {
   </div>
 
 </section>
-  <footer>
-    © 2026 SB TOPUP 2
+  <footer><footer>
+  <p class="footer-title">🔥 SB TOPUP 2</p>
+  <p>Fast • Easy • Trusted</p>
+  <p class="footer-copy">
+    © 2026 SB TOPUP 2 — All Rights Reserved
+  </p>
+</footer>
   </footer>
 <section class="services" id="order">
 <a href="#" class="button">ORDER NOW</a>
