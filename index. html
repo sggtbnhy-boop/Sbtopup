@@ -526,14 +526,91 @@ function askAI() {
   </p>
 </footer>
   </footer>
-<section class="services" id="order">
-<a href="#" class="button">ORDER NOW</a>
-  <h2>🛒 Place Your Order</h2>
+
 
   <div class="card">
 
     <form>
+<section class="services" id="order">
 
+  <h2>🛒 Place Your Order</h2>
+
+  <div class="card">
+
+    <form id="orderForm">
+
+      <input
+        type="text"
+        id="playerUID"
+        placeholder="🎮 Player UID"
+        required
+        style="width:100%;padding:14px;margin:8px 0;border-radius:8px;border:0;"
+      >
+
+      <input
+        type="text"
+        id="customerName"
+        placeholder="👤 আপনার নাম"
+        required
+        style="width:100%;padding:14px;margin:8px 0;border-radius:8px;border:0;"
+      >
+
+      <input
+        type="tel"
+        id="mobileNumber"
+        placeholder="📱 Mobile Number"
+        required
+        style="width:100%;padding:14px;margin:8px 0;border-radius:8px;border:0;"
+      >
+
+      <select
+        id="package"
+        required
+        style="width:100%;padding:14px;margin:8px 0;border-radius:8px;border:0;"
+      >
+        <option value="">💎 Package নির্বাচন করুন</option>
+        <option value="100 Diamonds - ৳80">100 Diamonds - ৳80</option>
+        <option value="310 Diamonds - ৳220">310 Diamonds - ৳220</option>
+        <option value="520 Diamonds - ৳350">520 Diamonds - ৳350</option>
+        <option value="1060 Diamonds - ৳700">1060 Diamonds - ৳700</option>
+      </select>
+
+      <select
+        id="paymentMethod"
+        required
+        style="width:100%;padding:14px;margin:8px 0;border-radius:8px;border:0;"
+      >
+        <option value="">💳 Payment Method</option>
+        <option value="bKash">bKash</option>
+        <option value="Nagad">Nagad</option>
+        <option value="Rocket">Rocket</option>
+      </select>
+
+      <input
+        type="text"
+        id="transactionID"
+        placeholder="🧾 Transaction ID"
+        required
+        style="width:100%;padding:14px;margin:8px 0;border-radius:8px;border:0;"
+      >
+
+      <button
+        type="submit"
+        class="button"
+        style="border:0;cursor:pointer;"
+      >
+        ✅ SUBMIT ORDER
+      </button>
+
+    </form>
+
+    <p id="orderMessage"
+       style="margin-top:15px;color:#22c55e;">
+    </p>
+
+  </div>
+
+</section>
       <input
         type="text"
         placeholder="Player UID"
@@ -589,5 +666,38 @@ function askAI() {
   </div>
 
 </section>
-</body>
+JavaScript <script>
+  document.getElementById("orderForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const uid = document.getElementById("playerUID").value;
+    const name = document.getElementById("customerName").value;
+    const mobile = document.getElementById("mobileNumber").value;
+    const packageName = document.getElementById("package").value;
+    const payment = document.getElementById("paymentMethod").value;
+    const transactionID = document.getElementById("transactionID").value;
+
+    const orderMessage = document.getElementById("orderMessage");
+
+    orderMessage.innerText =
+      "✅ Order submitted successfully!\n" +
+      "Player UID: " + uid + "\n" +
+      "Package: " + packageName + "\n" +
+      "Payment: " + payment + "\n" +
+      "Transaction ID: " + transactionID;
+
+    console.log({
+      uid: uid,
+      name: name,
+      mobile: mobile,
+      package: packageName,
+      payment: payment,
+      transactionID: transactionID
+    });
+
+    document.getElementById("orderForm").reset();
+
+  });
+</script></body>
 </html>
