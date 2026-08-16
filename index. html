@@ -12,7 +12,50 @@
       padding: 0;
       box-sizing: border-box;
     }
+<!-- AI ASSISTANT -->
+<section class="services" id="ai">
+  <h2>🤖 SB AI Assistant</h2>
 
+  <div class="card">
+    <p id="aiReply">
+      আসসালামু আলাইকুম! 👋
+      আমি SB TOPUP AI Assistant।
+      কী জানতে চান?
+    </p>
+
+    <input
+      id="aiQuestion"
+      type="text"
+      placeholder="আপনার প্রশ্ন লিখুন..."
+      style="width:100%;padding:14px;margin:15px 0;border-radius:8px;border:0;"
+    >
+
+    <button
+      onclick="askAI()"
+      class="button"
+      style="border:0;cursor:pointer;"
+    >
+      🤖 Ask AI
+    </button>
+  </div>
+</section>
+
+<script>
+function askAI() {
+  const question = document.getElementById("aiQuestion").value.trim();
+  const reply = document.getElementById("aiReply");
+
+  if (!question) {
+    reply.innerText = "⚠️ আগে আপনার প্রশ্ন লিখুন।";
+    return;
+  }
+
+  reply.innerText =
+    "🤖 SB AI: আপনার প্রশ্নটি পেয়েছি — \"" +
+    question +
+    "\"\n\nআসল AI API সংযোগ Part 7-এ করা হবে।";
+}
+</script>
     body {
       font-family: Arial, sans-serif;
       background: #0f172a;
