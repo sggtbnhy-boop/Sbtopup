@@ -468,7 +468,33 @@ function askAI() {
     </div>
 
   </section>
+<section class="services" id="payment">
 
+  <h2>💳 Payment Methods</h2>
+
+  <div class="card">
+    <h3>📱 bKash</h3>
+    <p>Payment করার আগে সঠিক নম্বর ও তথ্য যাচাই করুন।</p>
+  </div>
+
+  <div class="card">
+    <h3>📱 Nagad</h3>
+    <p>Payment করার আগে সঠিক নম্বর ও তথ্য যাচাই করুন।</p>
+  </div>
+
+  <div class="card">
+    <h3>🚀 Rocket</h3>
+    <p>Payment করার আগে সঠিক নম্বর ও তথ্য যাচাই করুন।</p>
+  </div>
+
+  <div class="card">
+    <p>
+      ⚠️ Payment করার আগে আপনার Order ও Package
+      ভালোভাবে যাচাই করুন।
+    </p>
+  </div>
+
+</section>
   <footer>
     © 2026 SB TOPUP 2
   </footer>
