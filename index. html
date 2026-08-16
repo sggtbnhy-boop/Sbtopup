@@ -68,7 +68,52 @@
   }
 </style>
 </style>
-  <style>
+  css<style><style>
+  .navbar {
+    background: #020617;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .logo {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .nav-links a:hover {
+    color: #22c55e;
+  }
+
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+    }
+
+    .nav-links {
+      width: 100%;
+    }
+  }
+</style>
     css
       margin: 0;
       padding: 0;
@@ -147,7 +192,20 @@ function askAI() {
     "\"\n\nআসল AI API সংযোগ Part 7-এ করা হবে।";
 }
 </script>
-    body {
+    body <nav class="navbar">
+
+  <div class="logo">
+    🔥 SB TOPUP 2
+  </div>
+
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#services">Top Up</a>
+    <a href="#order">Order</a>
+    <a href="#ai">🤖 AI</a>
+  </div>
+
+</nav>
       font-family: Arial, sans-serif;
       background: #0f172a;
       color: white;
